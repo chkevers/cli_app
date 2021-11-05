@@ -1,0 +1,17 @@
+#! /usr/bin/env python
+
+import argparse
+import sys
+
+parser = argparse.ArgumentParser(prog='test_cli',usage='%(prog)s [options] this is going to be awesome',description='My first CLI')
+
+parser.add_argument('-fn', '--fname', type=str, help='Enter your first name')
+parser.add_argument('-ln', '--lastname', type=str, help='Enter yoour last name')
+
+args = parser.parse_args()
+
+first_name = args.fname
+last_name = args.lastname
+
+print(first_name, last_name)
+
